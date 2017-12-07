@@ -3,17 +3,17 @@ import _ from 'lodash'
 
 export default _.extend({}, EventEmitter.prototype, {
     data: {
-
+        ready: false
     },
-    emitChange: () => {
+    emitChange: function(){
         // 'this' is the EventEmitter
-        this.emitChange()
+        this.emit('change')
     },
-    addEventListener: (callback) => {
+    addChangeListener: function(callback){
         this.on('change', callback)
     },
     // if its not being used, it doesnt need to be listening
-    removeChangeListener: (callback) => {
+    removeChangeListener: function(callback){
         this.removeListener('change', callback)
     }
 })

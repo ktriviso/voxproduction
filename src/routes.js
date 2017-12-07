@@ -13,14 +13,13 @@ const routes_with_components = [
 
 export default (
     <div>
-        {routes_with_components.map((route) => {
+        {routes_with_components.map((route) => (
             // return the actual route component
             // render cuts down on load time
             <Route exact={route.exact} path={route.path} render={(props) => {
-                return (
-                    <route.component data={AppStore.data} {...props} />
-                )
-            }}/>
-        })}
+                return <route.component data={AppStore.data} {...props} />
+                }}/>
+            )
+        )}
     </div>
 )
