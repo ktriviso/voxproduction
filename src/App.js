@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import './App.css';
 import './Vendor.css'
 import './Base.css'
-import {Header} from './Components/Partials/Header'
+import {Header} from './Components/Partials/Header.js'
+import {Footer} from './Components/Partials/Footer.js'
+import {Loader} from './Components/Partials/Loader.js'
 import AppStore from './AppStore/AppStore.js'
 import routes from './routes.js'
 import {BrowserRouter} from 'react-router-dom'
@@ -44,13 +46,14 @@ class App extends Component {
       const data = AppStore.data
       if(!data.ready) {
           this.getStore()
-          return <div>Loading</div>
+          return <Loader/>
       } else {
           return (
               <BrowserRouter>
                   <div>
                       <Header/>
                       {routes}
+                      <Footer/>
                   </div>
               </BrowserRouter>
           );

@@ -1,12 +1,11 @@
 import React, {Component} from 'react'
 import Masonry from 'react-masonry-component'
 import Featured from './Partials/Featured'
+import {Link} from 'react-router-dom'
 
 export default class Home extends Component {
     render() {
-        const postBackgroundStyle = {
-            backgroundImage: "url(images/thumbs/featured/featured-3.jpg)"
-        }
+
         var blogPosts = this.props.data.blogPosts.filter(function(post){
             return !post.fields.featured
         });
@@ -24,9 +23,9 @@ export default class Home extends Component {
                                         return (
                                             <article className="brick entry format-standard animate-this">
                                                <div className="entry-thumb">
-                                                  <a href="single-standard.html" className="thumb-link">
-                                                      <img src={blogPost.fields.mainPhoto.fields.file.url} alt="building"/>
-                                                  </a>
+                                                  <Link to={'/blog/' + blogPost.sys.id}>
+                                                    <img src={blogPost.fields.mainPhoto.fields.file.url} alt="building"/>
+                                                  </Link>
                                                </div>
                                                <div className="entry-text">
                                                     <div className="entry-header">
@@ -41,7 +40,9 @@ export default class Home extends Component {
 
                                                             </span>
                                                         </div>
-                                                        <h1 className="entry-title"><a href="single-standard.html">{blogPost.fields.title}</a></h1>
+                                                        <h1 className="entry-title">
+                                                            <Link to={'/blog/' + blogPost.sys.id}>{blogPost.fields.title}</Link>
+                                                        </h1>
                                                     </div>
                                                     <div className="entry-excerpt">{blogPost.fields.content}</div>
                                                 </div>

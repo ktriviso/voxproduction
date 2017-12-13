@@ -4,8 +4,6 @@ import AppStore from '../AppStore/AppStore'
 import {CONFIG} from '../Config'
 
 export const getAppStore = (callback) => {
-    // let pages = []
-    // let blogPosts = []
 
     const cms = Contentful.createClient({
         space: CONFIG.space_id,
@@ -20,9 +18,17 @@ export const getAppStore = (callback) => {
             return item.sys.contentType.sys.id === 'blogPost'
         })
         const featuredPosts = blogPosts.filter((post) => post.fields.featured === true)
-        console.log(featuredPosts)
+        const aboutData = _.find(responseItems, (item) => {
+            return item.sys.contentType.sys.id === 'about'
+        })
+        const contactData = _.find(responseItems, (item) => {
+            return item.sys.contentType.sys.id = 'contact'
+        })
+
         AppStore.data.blogPosts = blogPosts
         AppStore.data.featuredPosts = featuredPosts
+        AppStore.data.about = aboutData
+        AppStore.data.contact = contactData
         AppStore.data.ready = true
 
         AppStore.emitChange()
