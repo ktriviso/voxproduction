@@ -15,7 +15,7 @@ class App extends Component {
         super(props)
 
         this.state = {
-
+            removeLoader: false
         }
     }
     getStore(){
@@ -31,6 +31,15 @@ class App extends Component {
 
     componentDidMount(){
         AppStore.addChangeListener(this._onChange.bind(this))
+
+        var _this = this
+        setTimeout(function(){
+            console.log('setTimeout is working')
+            _this.setState({
+                removeLoader: true
+            })
+        }, 1000)
+
     }
 
     componentWillUnmount(){
@@ -47,7 +56,7 @@ class App extends Component {
       if(!data.ready) {
           this.getStore()
           return <Loader/>
-      } else {
+      } else if(this.state.removeLoader){
           return (
               <BrowserRouter>
                   <div>
@@ -57,6 +66,8 @@ class App extends Component {
                   </div>
               </BrowserRouter>
           );
+      } else {
+          return <Loader />
       }
     }
 }

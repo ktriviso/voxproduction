@@ -41,7 +41,7 @@ export default class Contact extends Component{
 
                     </div>
 
-                        <form name="cForm" id="cForm" method="post" action="">
+                        <form name="cForm" id="cForm" method="post" action="https://formspree.io/krista.triviso91@gmail.com">
                             <fieldset>
 
                             <div className="form-field">
