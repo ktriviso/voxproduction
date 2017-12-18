@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import OwlCarousel from 'react-owl-carousel2';
+import {Link} from 'react-router-dom'
 
 
 export default class Featured extends Component {
@@ -25,7 +26,10 @@ export default class Featured extends Component {
                                     <li className="entry-excerpt">{post.fields.categories.join(', ')}</li>
                             </ul>
 
-                            <h1 className="slide-title"><a href="single-standard.html" title="">{post.fields.title}</a></h1>
+                            <h1 className="slide-title">
+                                <Link to={'/blog/' + post.sys.id}>{post.fields.title}</Link>
+                            </h1>
+
                         </div>
 
                     </div>

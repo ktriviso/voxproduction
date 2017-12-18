@@ -24,11 +24,13 @@ export const getAppStore = (callback) => {
         const contactData = _.find(responseItems, (item) => {
             return item.sys.contentType.sys.id = 'contact'
         })
+        console.log(contactData)
 
         AppStore.data.blogPosts = blogPosts
         AppStore.data.featuredPosts = featuredPosts
         AppStore.data.about = aboutData
         AppStore.data.contact = contactData
+        console.log(AppStore.data.contact)
         AppStore.data.ready = true
 
         AppStore.emitChange()

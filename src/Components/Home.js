@@ -49,19 +49,18 @@ export default class Home extends Component {
 
                                                     <div className="entry-meta">
                                                         <span className="cat-links">
-                                                            {blogPost.fields.categories.map(function(category){
-                                                                return (
-                                                                    <a href="#">{category}</a>
-                                                                )
-                                                            })}
-
+                                                                    <ul className="entry-meta">
+                                                                            <li className="entry-excerpt">
+                                                                                {blogPost.fields.categories.join(', ')}
+                                                                            </li>
+                                                                    </ul>
                                                         </span>
                                                     </div>
                                                     <h1 className="entry-title">
                                                         <Link to={'/blog/' + blogPost.sys.id}>{blogPost.fields.title}</Link>
                                                     </h1>
                                                 </div>
-                                                <div className="entry-excerpt">{blogPost.fields.content}</div>
+                                                <div className="entry-excerpt">{blogPost.fields.featuredContent}</div>
                                             </div>
                                         </article>
                                     )

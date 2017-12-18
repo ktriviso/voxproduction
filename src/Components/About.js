@@ -17,7 +17,7 @@ export default class About extends Component {
                                 <div className="primary-content">
                                     <h1 className="entry-title add-bottom">{aboutData.fields.mainTitle}</h1>
                                     <p className="lead">{aboutData.fields.mainContent}</p>
-                                    <p>{aboutData.fields.subContent}</p>
+                                    <p>{aboutData.fields.featuredContent}</p>
                                 </div>
 
                             </section>

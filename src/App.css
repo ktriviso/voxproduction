@@ -305,7 +305,7 @@ ol {
 }
 
 ul {
-	list-style: disc;
+	list-style: none;
 }
 
 li {
@@ -1810,7 +1810,7 @@ header .logo a {
 		margin: 0;
 		padding: 0;
 		top: -24px;
-		right: 0;
+		left: 60%;
 		z-index: 600;
 	}
 
@@ -1902,18 +1902,18 @@ header .logo a {
 	}
 
 	.main-navigation {
-		display: none;
-		background: #FFFFFF;
-		padding: 132px 45px 54px 45px;
+		/*display: none;*/
+		/*background: #FFFFFF;*/
+		/*padding: 132px 45px 54px 45px;*/
 		margin: 0;
 		width: 100%;
 		height: auto;
 		clear: both;
-		box-shadow: 0 3px 3px rgba(0, 0, 0, 0.15);
+		/*box-shadow: 0 3px 3px rgba(0, 0, 0, 0.15);*/
 	}
 
 	.main-navigation li {
-		float: none;
+		float: left;
 	}
 
 	.main-navigation > li {
@@ -1928,7 +1928,7 @@ header .logo a {
 		display: block;
 		width: auto;
 		color: #848484;
-		padding: 18px 0;
+		padding: 10px;
 		line-height: 24px;
 		border: none;
 	}
@@ -2683,6 +2683,11 @@ footer ul li {
 	margin-bottom: 5.4rem;
 	color: #999999;
 }
+
+.bricks-wrapper .entry-header .entry-meta {
+	margin-left: 0!important;
+}
+
 .blog-single .entry-meta a,
 .blog-single .entry-meta a:visited {
 	color: #000000;
