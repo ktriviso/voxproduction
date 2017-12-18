@@ -1183,7 +1183,7 @@ input::-moz-focus-inner {
 }
 .bricks-wrapper .entry-header .entry-meta a,
 .bricks-wrapper .entry-header .entry-meta a:visited {
-	color: #D5B78E;
+	color: #000000;
 }
 
 .bricks-wrapper .entry-header .cat-links a::after {
@@ -1209,7 +1209,7 @@ input::-moz-focus-inner {
 
 .featured-grid,
 .featured-post-slide {
-	height: 560px;
+	height: 600px;
 }
 
 .featured-post-slide {
@@ -1402,6 +1402,7 @@ input::-moz-focus-inner {
 	}
 
 }
+
 
 
 /*  post formats - masonry view - (_common-styles.scss)
@@ -2362,7 +2363,8 @@ header .logo a {
 
 .bricks-wrapper .brick {
 	float: left;
-	padding: 0 20px;
+	padding: 20px!important;
+	margin-bottom: 0;
 }
 
 .bricks-wrapper .featured-grid {

@@ -10,7 +10,6 @@ export default class About extends Component {
                     <div className="row">
                         <div className="col-twelve">
                             <section>
-                            
                                 <div className="content-media">
                                     <img src={aboutData.fields.mainPhoto.fields.file.url}/>
                                 </div>
