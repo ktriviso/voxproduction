@@ -32,15 +32,15 @@ export const Footer = () => (
             <div className="row">
                 <div className="col-twelve">
                     <div className="">
-                        <div class="logo">
-                            <div class="icon animate">
+                        <div className="logo">
+                            <div className="icon animate">
                                 <span>K</span>
                                 <span>T</span>
                             </div>
-                            <div class="pipe animate">|</div>
-                            <div class="name animate">Krista Triviso</div>
+                            <div className="pipe animate">|</div>
+                            <div className="name animate">Krista Triviso</div>
                         </div>
-                            <span id="copyright">© Copyright Vox Felis 2018</span>
+                            <span id="">©  Vox Felis 2018</span>
                     </div>
                     <div id="go-top">
                         <a className="smoothscroll" title="Back to Top" href="#top"><i className="icon icon-arrow-up"></i></a>
