@@ -22,7 +22,7 @@ export const getAppStore = (callback) => {
             return item.sys.contentType.sys.id === 'about'
         })
         const contactData = _.find(responseItems, (item) => {
-            return item.sys.contentType.sys.id = 'contact'
+            return item.sys.contentType.sys.id === 'contact'
         })
 
         AppStore.data.blogPosts = blogPosts

@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import axios from 'axios'
+import EmailStatus from './EmailStatus'
 
 export default class Contact extends Component{
 
@@ -46,6 +47,12 @@ export default class Contact extends Component{
     render(){
         var contactData = this.props.data.contact
         console.log(contactData)
+        let successStatus
+
+        if(this.state.emailWasSent){
+            successStatus = <EmailStatus/>
+        }
+
         return (
             <section id="content-wrap" className="site-page">
                 <div className="row">
