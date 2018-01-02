@@ -3,10 +3,10 @@ export const Header = () => (
     <header className="short-header">
         <div className="gradient-block"></div>
         <div className="row header-content">
-            <div className="logo">
+            <div id="logo">
                 <a href="index.html">Author</a>
             </div>
-            
+
             <nav id="main-nav-wrap">
                 <ul className="main-navigation sf-menu">
                     <li className="current"><a href="/" title="">Home</a></li>

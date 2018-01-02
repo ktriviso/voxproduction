@@ -5,7 +5,7 @@ export const Footer = () => (
             <div className="row">
                 <div className="col-four tab-full mob-full footer-info">
                     <h4>Vox Felis</h4>
-                    <p>"Empowering and enlightening our community"<br/>All rights reserved. Trademark 2017.</p>
+                    <p>"Empowering and enlightening our community"<br/>All rights reserved. Trademark 2018.</p>
                 </div>
 
                 <div className="col-four tab-full mob-full  site-links">
@@ -22,8 +22,6 @@ export const Footer = () => (
                     <ul>
                         <li><a href="#">Twitter</a></li>
                         <li><a href="#">Facebook</a></li>
-                        <li><a href="#">Dribbble</a></li>
-                        <li><a href="#">Google+</a></li>
                         <li><a href="#">Instagram</a></li>
                     </ul>
                 </div>
@@ -33,8 +31,16 @@ export const Footer = () => (
         <div className="footer-bottom">
             <div className="row">
                 <div className="col-twelve">
-                    <div className="copyright">
-                        <span>© Copyright Abstract 2016</span>
+                    <div className="">
+                        <div class="logo">
+                            <div class="icon animate">
+                                <span>K</span>
+                                <span>T</span>
+                            </div>
+                            <div class="pipe animate">|</div>
+                            <div class="name animate">Krista Triviso</div>
+                        </div>
+                            <span id="copyright">© Copyright Vox Felis 2018</span>
                     </div>
                     <div id="go-top">
                         <a className="smoothscroll" title="Back to Top" href="#top"><i className="icon icon-arrow-up"></i></a>
