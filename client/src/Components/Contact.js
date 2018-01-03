@@ -55,6 +55,7 @@ export default class Contact extends Component{
 
         return (
             <section id="content-wrap" className="site-page">
+                {successStatus}
                 <div className="row">
                     <div className="col-twelve">
                         <section>

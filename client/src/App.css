@@ -3279,14 +3279,22 @@ footer ul li {
 /*email loader
 https://codepen.io/CKH4/pen/ZGNyep?limit=all&page=5&q=loader
 --------------------------------------------------------------*/
+#loader-container{
+	height: 100vh;
+	width: 100%;
+	top: 0;
+	background-color: white;
+	position: fixed;
+	z-index: 1000;
+}
 
-
-.loader {
+.email-loader {
   position: absolute;
   top: 50%;
   left: 40%;
   margin-left: 10%;
   transform: translate3d(-50%, -50%, 0);
+  z-index: 1100;
 }
 .dot {
   width: 24px;
@@ -3408,7 +3416,7 @@ https://codepen.io/ktriviso/pen/ppwYrg?limit=all&page=11&q=logo*/
 .logo .name {
   display: inline-block;
   vertical-align: middle;
-  font: 100 18px "Roboto";
+  font: 100 17px "Roboto";
 }
 .logo .name.animate {
   -webkit-animation: slideName 2s;

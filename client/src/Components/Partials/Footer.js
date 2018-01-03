@@ -32,15 +32,17 @@ export const Footer = () => (
             <div className="row">
                 <div className="col-twelve">
                     <div className="">
-                        <div className="logo">
-                            <div className="icon animate">
-                                <span>K</span>
-                                <span>T</span>
+                        <a href="https://github.com/ktriviso" target="_blank">
+                            <div class="logo">
+                                <div class="icon animate">
+                                    <span>K</span>
+                                    <span>T</span>
+                                </div>
+                                <div class="pipe animate">|</div>
+                                <div class="name animate">Krista Triviso</div>
                             </div>
-                            <div className="pipe animate">|</div>
-                            <div className="name animate">Krista Triviso</div>
-                        </div>
-                            <span id="">©  Vox Felis 2018</span>
+                        </a>
+                        <span id="">©  Vox Felis 2018</span> Design by <a href="https://www.styleshout.com/">Styleshout</a>.
                     </div>
                     <div id="go-top">
                         <a className="smoothscroll" title="Back to Top" href="#top"><i className="icon icon-arrow-up"></i></a>

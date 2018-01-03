@@ -7,12 +7,14 @@ export default class EmailStatus extends Component{
     }
     render(){
         return (
-            <div className="loader">
-                <div className="dot"></div>
-                <div className="dot"></div>
-                <div className="dot"></div>
-                <div className="dot"></div>
-                <div className="dot"></div>
+            <div id="loader-container">
+                <div className="email-loader">
+                    <div className="dot"></div>
+                    <div className="dot"></div>
+                    <div className="dot"></div>
+                    <div className="dot"></div>
+                    <div className="dot"></div>
+                </div>
             </div>
         )
     }
