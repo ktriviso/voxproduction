@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './Base.css'
 import './Vendor.css'
 import './App.css';
-import {Header} from './Components/Partials/Header.js'
+import Header from './Components/Partials/Header.js'
 import {Footer} from './Components/Partials/Footer.js'
 import {Loader} from './Components/Partials/Loader.js'
 import AppStore from './AppStore/AppStore.js'

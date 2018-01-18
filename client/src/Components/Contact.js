@@ -7,7 +7,11 @@ export default class Contact extends Component{
     constructor(props){
         super(props)
         this.state={
-            emailWasSent: false
+            emailWasSent: false,
+            name: '',
+            email: '',
+            number: '',
+            message: ''
         }
     }
 
