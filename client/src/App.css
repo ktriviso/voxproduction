@@ -69,11 +69,11 @@ body {
 
 body {
 	/*background: #9A8C98;*/
-	background: #f5f5f5;
+	background: rgba(0,0,0,.7);
 	font-family: "roboto-regular", sans-serif;
 	font-size: 1.7rem;
 	line-height: 3rem;
-	color: #111111;
+	color: white;
 }
 
 /* -------------------------------------------------------------------
@@ -166,6 +166,7 @@ h3, .h03 {
 h4, .h04 {
 	font-size: 1.7rem;
 	line-height: 1.76;
+	color: #666666!important;
 }
 h5, .h05 {
 	font-size: 1.4rem;
@@ -549,7 +550,7 @@ select {
 	font-size: 1.5rem;
 	line-height: 3rem;
 	max-width: 100%;
-	background: rgba(0, 0, 0, 0.1);
+	background: rgba(255, 255, 255, .2);
 	border: none;
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
@@ -620,8 +621,8 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 textarea:focus,
 select:focus {
-	background: #151515;
-	color: white;
+	background: white;
+	color: black;
 }
 
 label,
@@ -1537,7 +1538,9 @@ input::-moz-focus-inner {
  * ------------------------------------------------------------------- */
 header {
 	width: 100%;
-	background: #DBDBDB url(./images/escheresque_@2X.png) repeat;
+	/*background: #DBDBDB url(./images/escheresque_@2X.png) repeat;*/
+	/*background: #9599A8;*/
+	background: rgba(63,0,0, .9);
 	background-size: 46px 29px;
 	height: 130px;
 	border-bottom: 1px solid #E5E5E5;
@@ -1704,7 +1707,7 @@ header #logo a {
 }
 
 .main-navigation li a:hover {
-	color: #000000;
+	color: white;
 }
 
 .main-navigation li > a {
@@ -1712,8 +1715,8 @@ header #logo a {
 }
 
 .main-navigation li.current > a {
-	border-bottom: 2px solid #151515;
-	color: #000000;
+	border-bottom: 2px solid white;
+	color: white;
 	font-family: "montserrat-bold", sans-serif;
 }
 
@@ -2255,6 +2258,7 @@ header #logo a {
 	font-size: 3.3rem;
 	line-height: 1.364;
 	margin-bottom: 0.9rem;
+	color: #666666;
 }
 
 /* responsive:
@@ -2457,9 +2461,10 @@ footer [class*="col-"] {
 }
 
 footer h4 {
-	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	border-bottom: 1px solid rgba(255, 255, 255, .5);
 	padding-bottom: 1.2rem;
 	margin-bottom: 1.5rem;
+	color: rgba(255, 255, 255, .7)!important;
 }
 
 footer ul {
