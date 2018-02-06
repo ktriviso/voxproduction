@@ -31,7 +31,7 @@ export default class Blog extends Component {
     }
     componentDidMount(){
         console.log(this.props);
-        console.log(this.state)
+        console.log(this.state);
     }
     render() {
 
@@ -43,7 +43,7 @@ export default class Blog extends Component {
 
                             <div className="content-media">
                                 <div className="post-thumb">
-                                    <img src={this.state.mainPhoto} alt="building"/>
+                                    <figure><img src={this.state.mainPhoto}/></figure>
                                 </div>
                             </div>
                             <div className="primary-content">

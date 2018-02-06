@@ -11,9 +11,9 @@ export const Footer = () => (
                 <div className="col-four tab-full mob-full  site-links">
                     <h4>Contact</h4>
                     <ul>
-                        <li><a href="#">123 Manhattan Street</a></li>
-                        <li><a href="#">New York, NY 11211</a></li>
-                        <li><a href="#">P. (406) - 750 - 3376</a></li>
+                        <li>123 Manhattan Street</li>
+                        <li>New York, NY 11211</li>
+                        <li><a href="#">aleka@email.com</a></li>
                     </ul>
                 </div>
 
