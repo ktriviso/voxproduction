@@ -1,9 +1,12 @@
 import React, {Component} from 'react'
+import $ from "jquery"
+const ReactMarkdown = require('react-markdown')
 
 export default class About extends Component {
+
     render(){
         var aboutData = this.props.data.about
-        console.log(aboutData);
+
         return (
             <div>
                 <section id="content-wrap" className="site-page">
@@ -17,7 +20,7 @@ export default class About extends Component {
                                 <div className="primary-content">
                                     <h1 className="entry-title add-bottom">{aboutData.fields.mainTitle}</h1>
                                     <p className="lead">{aboutData.fields.featuredContent}</p>
-                                    <p>{aboutData.fields.mainContent}</p>
+                                    <ReactMarkdown source={aboutData.fields.mainContent} />
                                 </div>
 
                             </section>

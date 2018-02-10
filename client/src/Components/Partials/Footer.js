@@ -33,13 +33,13 @@ export const Footer = () => (
                 <div className="col-twelve">
                     <div className="">
                         <a href="https://github.com/ktriviso" target="_blank">
-                            <div class="logo">
-                                <div class="icon animate">
+                            <div className="logo">
+                                <div className="icon animate">
                                     <span>K</span>
                                     <span>T</span>
                                 </div>
-                                <div class="pipe animate">|</div>
-                                <div class="name animate">Krista Triviso</div>
+                                <div className="pipe animate">|</div>
+                                <div className="name animate">Krista Triviso</div>
                             </div>
                         </a>
                         <span id="">©  Vox Felis 2018</span> Design by <a href="https://www.styleshout.com/">Styleshout</a>.
