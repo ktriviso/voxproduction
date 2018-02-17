@@ -1,14 +1,22 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 import ReactPlayer from 'react-player'
+import Blog from '../Blog.js'
 
 
 export default class Featured extends Component {
 
+    constructor(props){
+        super(props);
+        this.state = {
+        }
+    }
 
     render(){
         const featuredPosts = this.props.featuredPosts
-
+        console.log(featuredPosts)
+        const test = featuredPosts.map((post) => post.fields.videoConfig === true)
+        console.log(test)
         const posts_html = featuredPosts.map((post) =>  (
                 <li>
                     <div className="featured-post-slide">
@@ -27,6 +35,7 @@ export default class Featured extends Component {
                     </div>
                 </li>
             ))
+
 
         return (
             <div className="brick entry featured-grid animate-this">

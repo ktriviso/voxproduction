@@ -11,11 +11,11 @@ export default class Blog extends Component {
             content: '',
             mainPhoto: '',
             date: '',
-            featuredContent: ''
+            featuredContent: '',
+            videoConfig: ''
         }
     }
     componentWillMount(){
-        console.log(this.props)
         const blogPostId = this.props.match.params.blogPostId
         const blogPosts = AppStore.data.blogPosts
         const currentBlogPost = blogPosts.find((post) => post.sys.id === blogPostId)

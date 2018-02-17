@@ -29,8 +29,7 @@ body {
 }
 
 body {
-	/*background: #9A8C98;*/
-	background: rgba(0,0,0,.7);
+	background: black;
 	font-family: "roboto-regular", sans-serif;
 	font-size: 1.7rem;
 	line-height: 3rem;
@@ -1499,8 +1498,7 @@ input::-moz-focus-inner {
 header {
 	width: 100%;
 	/*background: #DBDBDB url(./images/escheresque_@2X.png) repeat;*/
-	/*background: #9599A8;*/
-	background: rgba(63,0,0, .9);
+	background: black;
 	background-size: 46px 29px;
 	height: 130px;
 	border-bottom: 1px solid #E5E5E5;
