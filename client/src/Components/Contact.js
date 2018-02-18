@@ -1,6 +1,8 @@
 import React, {Component} from 'react'
 import axios from 'axios'
 import EmailStatus from './EmailStatus'
+import $ from "jquery"
+const ReactMarkdown = require('react-markdown')
 
 export default class Contact extends Component{
 
@@ -64,7 +66,9 @@ export default class Contact extends Component{
                     <div className="col-twelve">
                         <section>
                             <div className="primary-content">
-
+                                <div className="content-media">
+                                    <img src={contactData.fields.mainPhoto.fields.file.url}/>
+                                </div>
                                 <h1 className="entry-title add-bottom">{contactData.fields.mainTitle}</h1>
                                 <p className="lead">{contactData.fields.featuredContent}</p>
                                 <p>{contactData.fields.mainContent}</p>

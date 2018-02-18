@@ -1,5 +1,7 @@
 import React, {Component} from 'react'
 import AppStore from '../AppStore/AppStore'
+import $ from "jquery"
+const ReactMarkdown = require('react-markdown')
 
 export default class Blog extends Component {
 
