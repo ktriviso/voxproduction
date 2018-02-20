@@ -1,10 +1,3 @@
-
-// <Featured featuredPosts={featuredPosts}/>
-
-<div className="post-background" >
-    <ReactPlayer url={post.fields.mainPhoto.fields.file.url} playing />
-</div>
-
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>

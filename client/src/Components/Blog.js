@@ -1,7 +1,9 @@
 import React, {Component} from 'react'
 import AppStore from '../AppStore/AppStore'
+import ReactPlayer from 'react-player'
 import $ from "jquery"
 const ReactMarkdown = require('react-markdown')
+
 
 export default class Blog extends Component {
 
@@ -14,7 +16,7 @@ export default class Blog extends Component {
             mainPhoto: '',
             date: '',
             featuredContent: '',
-            videoConfig: ''
+            videoConfig: false
         }
     }
     componentWillMount(){
@@ -28,7 +30,8 @@ export default class Blog extends Component {
             content: currentBlogPost.fields.content,
             mainPhoto: currentBlogPost.fields.mainPhoto.fields.file.url,
             date: currentBlogPost.fields.date,
-            featuredContent: currentBlogPost.fields.featuredContent
+            featuredContent: currentBlogPost.fields.featuredContent,
+            videoConfig: currentBlogPost.fields.videoConfig
         })
     }
     componentDidMount(){
@@ -36,6 +39,13 @@ export default class Blog extends Component {
         console.log(this.state);
     }
     render() {
+
+        let media
+        if(this.state.videoConfig){
+            media = <ReactPlayer width='100%' height='100%' url={this.state.mainPhoto} playing />
+        }else{
+            media = <figure><img src={this.state.mainPhoto}/></figure>
+        }
 
         return (
             <section id="content-wrap" className="blog-single">
@@ -45,7 +55,7 @@ export default class Blog extends Component {
 
                             <div className="content-media">
                                 <div className="post-thumb">
-                                    <figure><img src={this.state.mainPhoto}/></figure>
+                                    {media}
                                 </div>
                             </div>
                             <div className="primary-content">
@@ -55,7 +65,7 @@ export default class Blog extends Component {
                                     <li className="cat">{this.state.categories}</li>
                                 </ul>
                                 <p className="lead">{this.state.featuredContent}</p>
-                                <p>{this.state.content}</p>
+                                <ReactMarkdown source={this.state.content} />
                             </div>
                         </article>
                     </div>

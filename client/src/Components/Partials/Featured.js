@@ -14,9 +14,7 @@ export default class Featured extends Component {
 
     render(){
         const featuredPosts = this.props.featuredPosts
-        console.log(featuredPosts)
         const test = featuredPosts.map((post) => post.fields.videoConfig === true)
-        console.log(test)
         const posts_html = featuredPosts.map((post) =>  (
                 <li>
                     <div className="featured-post-slide">
